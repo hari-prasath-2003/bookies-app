@@ -9,7 +9,7 @@ app.use('/search',searchRoute)
 app.use('/public',express.static("public"))
 app.set("view engine","ejs")
 app.use("/home",homeRoute)
-mongoose.connect("mongodb://localhost:27017/bookstore")
+mongoose.connect("mongodb+srv://hari:hari@cluster0.glxgy.mongodb.net/bookstore?retryWrites=true&w=majority",{ useNewUrlParser: true,})
 
 
 app.listen(process.env.PORT || 3000)
