@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/public/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookies</title>
+</head>
+<body>
+    <div class="nav">
+        <p class="logo">BOOKIES</p>
+        <div class="search-section">
+            <input type="text" class="search" placeholder="Search Books">
+            <button class="button"><img src="/public/search.png" alt="" class="search-img"></button>
+        </div>
+        
+        <button class="button">LOGOUT</button>
+    </div>
+    <div class="banner">
+        <center><p class="banner-heading">ONE PLACE TO SOLVE MILLION REQUIREMENTS</p></center>
+        <center><p class="banner-text">10000+ BOOKS 20+ GENERE</p></center>
+    </div>
+    <hr>
+    <center><p id="book-section-heading"># OUR BEST BOOKS</p></center> 
+    <div class="books-section">
+        <% datas.forEach((data,index)=>{ %>
+            <div class="book-card">
+                <div class="book-card-section">
+                    <img src=<%=`/public/image${index+1}.png`%> alt="">
+                    <div class="book-card-section-detail">
+                        <p class="title"><%=`${data.title}  (${data.year_written}) ${data.edition} edition` %></p>
+                        <p class="author">by <%=data.author%></p>
+                        <hr>
+                        <p class="price">$<%=data.price%></p>
+                    </div>
+                    
+                </div>  
+            </div>
+        <%})%>
+    </div>
+    <hr>
+    <center><p id="author-section-heading"># TOP AUTHOR</p></center>
+    <div class="author-section">
+        <div class="author-card">
+            <div class="author-card-section">
+                <img src="/public/author1.png" alt="" class="author-img">
+                <div class="about-author">
+                    <p class="author-name">BILL GATES</p>
+                    <hr>
+                    <div class="author-contact">
+                        <div class="social-media">
+                            <img src="/public/facebook.png" alt="">
+                            <img src="/public/twitter.png" alt="">
+                            <img src="/public//gmail.png" alt="">
+                        </div>
+                        <button>FOLLOW</button>
+                    </div>
+                </div>
+
+            </div>
+           
+        </div>
+    </div>
+
+</body>
+</html>
